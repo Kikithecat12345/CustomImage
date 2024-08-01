@@ -22,6 +22,12 @@ stages:
     - apt-get update
 
   # Put your custom actions behind this comment
+  - name: apt-install
+    type: apt
+    source:
+      packages: 
+        - units
+        - git
 
   - name: example-commands # Sample module demonstrating the Shell module with custom commands
     type: shell
